@@ -88,4 +88,9 @@ FailFirst 不会一次抛出一套问卷。它每次只问一个具体情境问�
 
 ## License
 
-[MIT](LICENSE)
+Free for personal, educational, and non-commercial use. Modification and
+redistribution are permitted with attribution. Commercial use requires prior
+authorization from the author.
+
+See [LICENSE](LICENSE) for the license scope, attribution requirements, and a
+link to the official CC BY-NC 4.0 legal code.
