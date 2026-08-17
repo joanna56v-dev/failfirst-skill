@@ -88,9 +88,10 @@ FailFirst 不会一次抛出一套问卷。它每次只问一个具体情境问�
 
 ## License
 
-Free for personal, educational, and non-commercial use. Modification and
-redistribution are permitted with attribution. Commercial use requires prior
-authorization from the author.
+- Free for personal, educational, and other non-commercial use.
+- Modification and redistribution are permitted under CC BY-NC 4.0 with
+  attribution.
+- Commercial use is not permitted under CC BY-NC 4.0.
+- Separate commercial permission may be requested from the copyright holder.
 
-See [LICENSE](LICENSE) for the license scope, attribution requirements, and a
-link to the official CC BY-NC 4.0 legal code.
+See [LICENSE](LICENSE) for details and the official CC BY-NC 4.0 license page.
