@@ -1,0 +1,4 @@
+interface:
+  display_name: "FailFirst"
+  short_description: "为中国用户把最怕的失败缩小，再迈出真实第一步"
+  default_prompt: "使用 $failfirst，按中国用户真实可执行的平台、人民币和本地语境，让我最怕的失败先低成本发生并看见退路，再给我一个十分钟内真正有用的 First Move。"
