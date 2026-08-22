@@ -116,22 +116,45 @@ FailFirst 会静默进入对话，不宣布“模式开启”，不使用“旅�
 
 ## 安装
 
-下载或克隆这个仓库，把 [SKILL.md](SKILL.md) 放到你的 Agent Skills 目录，并确保它位于 `failfirst` 文件夹根目录。
+必须安装整个仓库目录，不能只复制 [SKILL.md](SKILL.md)。FailFirst 会读取 [examples/examples.md](examples/examples.md)，并使用 [agents/openai.yaml](agents/openai.yaml) 提供客户端元数据；漏掉子目录会得到残缺版本。
 
-Codex 用户可以放到：
+### Codex：推荐安装
 
-```text
-~/.agents/skills/failfirst/
-```
-
-在仓库根目录执行：
+首次安装：
 
 ```bash
-mkdir -p ~/.agents/skills/failfirst
-cp SKILL.md ~/.agents/skills/failfirst/SKILL.md
+mkdir -p ~/.codex/skills
+git clone --depth 1 https://github.com/joanna56v-dev/failfirst-skill.git ~/.codex/skills/failfirst
 ```
 
-最终路径应为 `~/.agents/skills/failfirst/SKILL.md`，不要再嵌套一层仓库目录。
+最终至少应存在：
+
+```text
+~/.codex/skills/failfirst/SKILL.md
+~/.codex/skills/failfirst/examples/examples.md
+~/.codex/skills/failfirst/agents/openai.yaml
+```
+
+已经通过 Git 克隆安装的用户，更新到 GitHub `main` 最新版：
+
+```bash
+git -C ~/.codex/skills/failfirst pull --ff-only
+```
+
+### 其他支持 Agent Skills 的客户端
+
+若客户端使用通用目录 `~/.agents/skills`：
+
+```bash
+mkdir -p ~/.agents/skills
+git clone --depth 1 https://github.com/joanna56v-dev/failfirst-skill.git ~/.agents/skills/failfirst
+```
+
+最终入口应为 `~/.agents/skills/failfirst/SKILL.md`。若客户端使用其他 Skill 根目录，把完整仓库克隆到该目录下的 `failfirst` 文件夹即可。
+
+### 不使用 Git
+
+从 GitHub 下载 ZIP，解压后把仓库文件夹重命名为 `failfirst`，再整体移动到客户端的 Skills 目录。必须保留 `examples/` 与 `agents/`；不要只拖走 `SKILL.md`，也不要产生 `failfirst/failfirst-skill-main/SKILL.md` 这种嵌套路径。
 
 然后重启 Codex，或等待 Codex 自动检测 Skill 变化。
 
